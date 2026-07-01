@@ -1,0 +1,147 @@
+!
+version 15.0
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname SW-HQ
+!
+!
+!
+no ip domain-lookup
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+interface FastEthernet0/1
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/2
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/3
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/4
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/5
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/6
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/7
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/8
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/9
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/10
+ description Link to SRV-Data
+ switchport access vlan 10
+ switchport mode access
+ switchport nonegotiate
+!
+interface FastEthernet0/11
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/12
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/13
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/14
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/15
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/16
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/17
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/18
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/19
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/20
+ description Link Admin-HQ
+ switchport access vlan 20
+ switchport mode access
+ switchport nonegotiate
+!
+interface FastEthernet0/21
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/22
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/23
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/24
+ description ** Not in use **
+ shutdown
+!
+interface GigabitEthernet0/1
+ description Link R-HQ
+ switchport trunk allowed vlan 10,20
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface GigabitEthernet0/2
+ description ** Not in use **
+ shutdown
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+!
+!
+!
+line con 0
+ logging synchronous
+!
+line vty 0 4
+ login
+line vty 5 15
+ login
+!
+!
+!
+!
+end
+
