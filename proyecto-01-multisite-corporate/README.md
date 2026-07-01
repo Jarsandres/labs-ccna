@@ -1,9 +1,4 @@
 # Proyecto 01: Multisite Corporate
-
-Este proyecto detalla el diseño, implementación y endurecimiento de seguridad de una infraestructura de red empresarial multi-sede.
-
----
-
 ## 1. Resumen del Proyecto
 
 Este documento detalla el diseño, implementación y endurecimiento de seguridad de una infraestructura de red empresarial multi-sede. La arquitectura conecta una Oficina Central (HQ), donde reside el Data Center corporativo, con dos sucursales remotas (Branch-A y Branch-B) utilizando un modelo WAN Hub-and-Spoke.
