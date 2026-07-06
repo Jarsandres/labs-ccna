@@ -1,4 +1,7 @@
 # Proyecto 01: Multisite Corporate
+
+[🇬🇧 Read in English](./README.en.md) | [🇪🇸 Versión en Español](./README.md)
+
 ## 1. Resumen del Proyecto
 
 Este documento detalla el diseño, implementación y endurecimiento de seguridad de una infraestructura de red empresarial multi-sede. La arquitectura conecta una Oficina Central (HQ), donde reside el Data Center corporativo, con dos sucursales remotas (Branch-A y Branch-B) utilizando un modelo WAN Hub-and-Spoke.
@@ -9,7 +12,8 @@ El objetivo principal es garantizar la conectividad global mediante enrutamiento
 
 ## 2. Arquitectura de la Topología
 
-![Topología de la Red](topologia.png)
+![Topología de la Red](Topology.png)
+
 
 La red utiliza conexiones lógicas troncales hacia los switches locales y enlaces seriales punto a punto para el transporte WAN administrado por el Hub Central:
 
