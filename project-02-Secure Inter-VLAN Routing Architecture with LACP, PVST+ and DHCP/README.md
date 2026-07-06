@@ -202,6 +202,3 @@ Puedes inspeccionar los respaldos completos de las configuraciones en ejecución
 * [DSW2 Config](./configs/DSW2_startup-config.txt)
 * [ASW1 Config](./configs/ASW1_startup-config.txt)
 * [ASW2 Config](./configs/ASW2_startup-config.txt)
-
----
-*Este laboratorio demuestra la aplicación práctica de diseño robusto, redundante y altamente seguro bajo los estándares de la certificación de redes Cisco CCNA.*
