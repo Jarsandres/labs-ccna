@@ -4,7 +4,6 @@
 
 ## 1. Resumen del Proyecto
 
-
 Este documento detalla el diseño, implementación y endurecimiento (*hardening*) de seguridad de una infraestructura de red LAN corporativa de alta disponibilidad para una empresa mediana. La solución abarca desde la redundancia y agregación de enlaces en la Capa 2 hasta la automatización de servicios de direccionamiento y la seguridad perimetral de acceso en los puertos de usuario.
 
 ---
@@ -36,7 +35,8 @@ La red se ha segmentado en diferentes VLANs para reducir los dominios de broadca
 
 ### IPs de Gestión de Dispositivos (SVI VLAN 99)
 
-- **DSW1:** `192.168.99.11`
+* **DSW1:** `192.168.99.11`
+
 * **DSW2:** `192.168.99.12`
 * **ASW1:** `192.168.99.21`
 * **ASW2:** `192.168.99.22`
@@ -52,6 +52,7 @@ Agregación de enlaces lógicos utilizando el protocolo estándar de la industri
 ### B. PVST+ (Per-VLAN Spanning Tree)
 
 Mitigación determinista de bucles en la Capa 2 utilizando Spanning Tree por VLAN. Se configuró:
+
 * `DSW1` como **Root Bridge principal** para las VLANs 10 y 99.
 * `DSW2` como **Root Bridge principal** para la VLAN 20.
 Esta configuración distribuye de forma equilibrada la carga de tráfico STP (*STP Load Balancing*), evitando la infrautilización de los enlaces de backup lógicos.
@@ -63,18 +64,21 @@ Configuración en el Router `R1` para interceptar las solicitudes de broadcast d
 ### D. Port-Security (Seguridad de Acceso)
 
 Blindaje aplicado en las interfaces `Fa0/10` de los switches de acceso `ASW1` y `ASW2`:
+
 * Límite de acceso fijado a un **máximo de 1 dirección MAC** por puerto.
 * Aprendizaje persistente dinámico mediante **MAC Address Sticky**.
 * Acción ante violaciones de seguridad configurada en modo **Shutdown**. Si se conecta un dispositivo con una dirección MAC no registrada, el puerto se apaga de inmediato y entra en estado *err-disable*.
 
 ### E. Spanning-Tree PortFast y BPDU Guard
 
-- **PortFast:** Habilitado en los puertos de usuario para omitir los estados tradicionales de escucha y aprendizaje de STP, disminuyendo el tiempo de convergencia de 30 a 0 segundos al conectar un equipo.
+* **PortFast:** Habilitado en los puertos de usuario para omitir los estados tradicionales de escucha y aprendizaje de STP, disminuyendo el tiempo de convergencia de 30 a 0 segundos al conectar un equipo.
+
 * **BPDU Guard:** Protege la topología desactivando inmediatamente el puerto si detecta la recepción de tramas BPDU (lo que indicaría la conexión de otro switch no autorizado en los puertos de acceso).
 
 ### F. Administración Remota Segura (SSHv2)
 
-- Deshabilitación total de conexiones no cifradas mediante Telnet.
+* Deshabilitación total de conexiones no cifradas mediante Telnet.
+
 * Generación de claves de cifrado RSA de alta seguridad.
 * Habilitación y uso exclusivo de **SSHv2** para la gestión y administración segura de todos los equipos.
 
@@ -198,6 +202,3 @@ Puedes inspeccionar los respaldos completos de las configuraciones en ejecución
 * [DSW2 Config](./configs/DSW2_startup-config.txt)
 * [ASW1 Config](./configs/ASW1_startup-config.txt)
 * [ASW2 Config](./configs/ASW2_startup-config.txt)
-
----
-*Este laboratorio demuestra la aplicación práctica de diseño robusto, redundante y altamente seguro bajo los estándares de la certificación de redes Cisco CCNA.*
