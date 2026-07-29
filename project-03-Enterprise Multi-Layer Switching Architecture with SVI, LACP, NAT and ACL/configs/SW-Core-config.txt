@@ -1,0 +1,211 @@
+!
+version 12.2(37)SE1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname SW-CORE
+!
+!
+no profinet
+!
+!
+!
+!
+!
+ip routing
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+no ip domain-lookup
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface Port-channel1
+ description LACP EtherChannel Po1
+ switchport trunk allowed vlan 10,20
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface FastEthernet0/1
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/2
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/3
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/4
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/5
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/6
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/7
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/8
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/9
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/10
+ description Access - Server-DMZ (VLAN 30)
+ switchport access vlan 30
+ switchport mode access
+ switchport nonegotiate
+!
+interface FastEthernet0/11
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/12
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/13
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/14
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/15
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/16
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/17
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/18
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/19
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/20
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/21
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/22
+ description ** Not in use **
+ shutdown
+!
+interface FastEthernet0/23
+ description LACP EtherChannel Po1 to SW1 Fa0/23
+ switchport trunk allowed vlan 10,20
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 1 mode active
+!
+interface FastEthernet0/24
+ description LACP EtherChannel Po1 to SW1 Fa0/24
+ switchport trunk allowed vlan 10,20
+ switchport mode trunk
+ switchport nonegotiate
+ channel-protocol lacp
+ channel-group 1 mode active
+!
+interface GigabitEthernet0/1
+ description Link to R1
+ no switchport
+ ip address 10.0.0.2 255.255.255.252
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/2
+ description ** Not in use **
+ shutdown
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan10
+ description SVI-VLAN10
+ mac-address 0009.7c6d.9501
+ ip address 192.168.10.1 255.255.255.0
+!
+interface Vlan20
+ description SVI-VLAN20
+ mac-address 0009.7c6d.9502
+ ip address 192.168.20.1 255.255.255.0
+!
+interface Vlan30
+ description SVI-VLAN30
+ mac-address 0009.7c6d.9503
+ ip address 192.168.30.1 255.255.255.0
+!
+ip classless
+ip route 0.0.0.0 0.0.0.0 10.0.0.1 
+!
+ip flow-export version 9
+!
+!
+ip access-list extended DMZ-SECURITY-POLICY
+ permit tcp 192.168.0.0 0.0.255.255 host 192.168.30.10 eq www
+ permit tcp 192.168.0.0 0.0.255.255 host 192.168.30.10 eq 443
+ deny ip 192.168.10.0 0.0.0.255 192.168.20.0 0.0.0.255
+ permit ip any any
+!
+!
+!
+!
+!
+!
+line con 0
+ logging synchronous
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+!
+end
+
