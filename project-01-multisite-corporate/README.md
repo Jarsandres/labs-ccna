@@ -22,7 +22,7 @@ La red utiliza conexiones lógicas troncales hacia los switches locales y enlace
 
 ---
 
-## 3. Tecnologías e Implementación Ingenieril
+## 3. Tecnologías e Implementación
 
 ### A. Arquitectura de Capa 2 (Switching)
 
