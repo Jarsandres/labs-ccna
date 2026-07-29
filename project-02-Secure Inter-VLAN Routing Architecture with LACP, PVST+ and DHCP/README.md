@@ -8,6 +8,12 @@ Este documento detalla el diseño, implementación y endurecimiento (*hardening*
 
 ---
 
+## 📦 Archivo de Packet Tracer (.pkt)
+
+* 📥 **[Descargar Topología en Packet Tracer (.pkt)](./project-02-secure-intervlan-lacp-pvst-dhcp.pkt)** — *Descarga el archivo completo listo para abrir en Cisco Packet Tracer 8.x / 9.x.*
+
+---
+
 ## 2. Arquitectura de la Topología y Diseño WAN
 
 La red está estructurada bajo el modelo de diseño jerárquico clásico, dividida en las capas de **Distribución** (conmutación y control de bucles redundante) y **Acceso** (conectividad de terminales y políticas de seguridad).

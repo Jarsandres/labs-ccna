@@ -10,6 +10,12 @@ The primary objective is to guarantee global connectivity through dynamic routin
 
 ---
 
+## 📦 Packet Tracer File (.pkt)
+
+* 📥 **[Download Packet Tracer Topology (.pkt)](./project-01-multisite-corporate.pkt)** — *Download the complete file ready to open in Cisco Packet Tracer 8.x / 9.x.*
+
+---
+
 ## 2. Topology Architecture
 
 ![Network Topology](Topology.png)

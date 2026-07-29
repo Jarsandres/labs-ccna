@@ -10,6 +10,12 @@ The topology and reference configurations align with the practical and theoretic
 
 ---
 
+## 📦 Packet Tracer File (.pkt)
+
+* 📥 **[Download Packet Tracer Topology (.pkt)](./project-02-secure-intervlan-lacp-pvst-dhcp.pkt)** — *Download the complete file ready to open in Cisco Packet Tracer 8.x / 9.x.*
+
+---
+
 ## 2. Topology Architecture & WAN Design
 
 The network is structured under Cisco's classic hierarchical design model, divided into the **Distribution** layer (conformance, switching, and redundant loop control) and the **Access** layer (endpoint connectivity and security policy enforcement).

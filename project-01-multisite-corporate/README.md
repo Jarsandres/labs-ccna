@@ -10,6 +10,12 @@ El objetivo principal es garantizar la conectividad global mediante enrutamiento
 
 ---
 
+## 📦 Archivo de Packet Tracer (.pkt)
+
+* 📥 **[Descargar Topología en Packet Tracer (.pkt)](./project-01-multisite-corporate.pkt)** — *Descarga el archivo completo listo para abrir en Cisco Packet Tracer 8.x / 9.x.*
+
+---
+
 ## 2. Arquitectura de la Topología
 
 ![Topología de la Red](Topology.png)
