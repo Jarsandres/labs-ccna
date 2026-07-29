@@ -3,4 +3,5 @@ __pycache__/
 *.pyc
 MCP-Packet-Tracer/
 *.pts
+*.pdf
 .agents/
