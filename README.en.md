@@ -1,40 +1,41 @@
-# CCNA Network Portfolio (Cisco Certified Network Associate)
+# 🌐 CCNA Networking & Infrastructure Portfolio
 
-[🇪🇸 Versión en Español](./README.md) | [🇬🇧 English Version](./README.en.md)
+[🇬🇧 Read in English](./README.en.md) | [🇪🇸 Versión en Español](./README.md)
 
-Welcome to my networking portfolio. This repository is designed to compile and document a collection of practical labs, topologies, and device configurations performed during and after my preparation for the **Cisco CCNA 200-301** certification, simulating real-world design, configuration, and deployment environments.
-
----
-
-## 🛠️ Demonstrated Technical Competencies
-
-Implementations in the following technological areas are documented in this repository:
-
-* **Layer 2 Switching:** Segmentation via VLANs, manual trunk links (802.1Q), loop prevention and optimization using Spanning Tree Protocol (STP/RSTP), and port security (Port Security).
-* **Layer 3 Routing:** Inter-VLAN Routing (Router-on-a-Stick and SVI), static routing, and dynamic routing using OSPFv2 (Single-Area and Backbone).
-* **Security & IP Services (Layer 4 & Perimeter):** Device hardening on routers and switches, access control using Extended ACLs (Principle of Least Privilege), Network Address Translation (NAT/PAT), and infrastructure services (DHCP, SSH, Syslog).
+Welcome to my technical networking portfolio. This repository documents a structured collection of practical labs, network architectures, and real device configurations developed during my preparation and certification for **Cisco CCNA (200-301)**, simulating corporate design, switching, routing, and security environments.
 
 ---
 
-## 📂 Projects and Labs
+## 🛠️ Demonstrated Technical Skills
 
-| Project Name | Main Focus | Key Technologies | Status | Link |
+* **Layer 2 Switching:** VLAN segmentation (802.1Q), Spanning Tree Protocol (STP / PVST+), Link Aggregation with EtherChannel (LACP), and access layer hardening with Port-Security.
+* **Layer 3 Routing:** Multi-layer switching with SVIs (Cisco 3560), L3 routed interfaces (`/30`), Router-on-a-Stick, and dynamic routing with OSPFv2 (Single area).
+* **Security & Egress (Layer 4 & WAN):** Extended Access Control Lists (Named ACLs), NAT/PAT Overload address translation, DHCP Relay, and secure SSHv2 administration.
+
+---
+
+## 📂 Projects & Laboratories
+
+| Project | Primary Focus | Key Technologies | Status | Link |
 | :--- | :--- | :--- | :--- | :--- |
-| **Project 01: Multisite Corporate** | Hub-and-Spoke multisite enterprise network | OSPFv2, VLAN Trunking, ACLs, PPP, RoaS | ✅ Completed | [View Project](./project-01-multisite-corporate/README.en.md) |
-| **Project 02: Secure and Resilient Corporate Network** | High availability and security in LAN | LACP, PVST+, DHCP Relay, Port Security, SSHv2 | ✅ Completed | [View Project](./project-02-Secure%20Inter-VLAN%20Routing%20Architecture%20with%20LACP,%20PVST+%20and%20DHCP/README.en.md) |
-
-*(Note: I will continue to add more labs and projects as I develop new topologies in Packet Tracer, GNS3, and EVE-NG).*
+| **Project 01: Multisite Corporate** | Multisite Hub-and-Spoke corporate network | OSPFv2, VLAN Trunking, ACLs, PPP, RoaS | ✅ Completed | [View Project](./project-01-multisite-corporate) |
+| **Project 02: Secure Corporate Network** | High availability and LAN security | LACP, PVST+, DHCP Relay, Port Security, SSHv2 | ✅ Completed | [View Project](./project-02-Secure%20Inter-VLAN%20Routing%20Architecture%20with%20LACP,%20PVST+%20and%20DHCP) |
+| **Project 03: Enterprise Multi-Layer Network** | L3 Switch SVI, LACP, NAT/PAT, and ACL | SVI (Switch 3560), EtherChannel LACP, NAT/PAT, Extended ACL, DMZ | ✅ Completed | [View Project](./project-03-Enterprise%20Multi-Layer%20Switching%20Architecture%20with%20SVI,%20LACP,%20NAT%20and%20ACL) |
 
 ---
 
 ## 🗂️ Repository Structure
 
-* [project-01-multisite-corporate/](./project-01-multisite-corporate): Enterprise Hub-and-Spoke network with perimeter security for the Data Center.
-  * [configs/](./project-01-multisite-corporate/configs): Backups of running configurations (`startup-config`) for all routers and switches.
-  * [Topology.png](./project-01-multisite-corporate/Topology.png): Logical diagram of the headquarters and branch offices network infrastructure.
-* [project-02-Secure Inter-VLAN Routing Architecture with LACP, PVST+ and DHCP/](./project-02-Secure%20Inter-VLAN%20Routing%20Architecture%20with%20LACP,%20PVST+%20and%20DHCP): Redundant corporate network with Layer 2 load balancing and access hardening.
-  * [configs/](./project-02-Secure%20Inter-VLAN%20Routing%20Architecture%20with%20LACP,%20PVST+%20and%20DHCP/configs): Backups of running configurations (`startup-config`) for routers and switches.
-  * [Topology.png](./project-02-Secure%20Inter-VLAN%20Routing%20Architecture%20with%20LACP,%20PVST+%20and%20DHCP/Topology.png): Logical diagram of the hierarchical LAN model with double redundant links.
+* [project-01-multisite-corporate/](./project-01-multisite-corporate): Hub-and-Spoke enterprise network with perimeter security for Data Center.
+  * [configs/](./project-01-multisite-corporate/configs): Backup `startup-config` files.
+  * [Topology.png](./project-01-multisite-corporate/Topology.png): Infrastructure logical diagram.
+* [project-02-Secure Inter-VLAN Routing Architecture with LACP, PVST+ and DHCP/](./project-02-Secure%20Inter-VLAN%20Routing%20Architecture%20with%20LACP,%20PVST+%20and%20DHCP): Redundant corporate network with L2 load balancing and access hardening.
+  * [configs/](./project-02-Secure%20Inter-VLAN%20Routing%20Architecture%20with%20LACP,%20PVST+%20and%20DHCP/configs): Backup `startup-config` files.
+  * [Topology.png](./project-02-Secure%20Inter-VLAN%20Routing%20Architecture%20with%20LACP,%20PVST+%20and%20DHCP/Topology.png): Network logical diagram.
+* [project-03-Enterprise Multi-Layer Switching Architecture with SVI, LACP, NAT and ACL/](./project-03-Enterprise%20Multi-Layer%20Switching%20Architecture%20with%20SVI,%20LACP,%20NAT%20and%20ACL): Multi-layer network with L3 Switch, EtherChannel LACP, NAT/PAT, and extended ACL in DMZ.
+  * [configs/](./project-03-Enterprise%20Multi-Layer%20Switching%20Architecture%20with%20SVI,%20LACP,%20NAT%20and%20ACL/configs): Backup `startup-config` files.
+  * [Topology.png](./project-03-Enterprise%20Multi-Layer%20Switching%20Architecture%20with%20SVI,%20LACP,%20NAT%20and%20ACL/Topology.png): Official Packet Tracer topology screenshot.
 
 ---
-*This repository will be continuously updated to reflect new scenarios and infrastructure optimizations.*
+
+*(Note: This repository is continuously updated as I build and validate new practical networking scenarios).*
