@@ -16,11 +16,11 @@ Bienvenido/a a mi portafolio técnico de redes. Este repositorio documenta una c
 
 ## 📂 Proyectos y Laboratorios
 
-| Proyecto | Enfoque Principal | Tecnologías Clave | Estado | Enlace |
-| :--- | :--- | :--- | :--- | :--- |
-| **Proyecto 01: Multisite Corporate** | Red corporativa multisitio Hub-and-Spoke | OSPFv2, VLAN Trunking, ACLs, PPP, RoaS | ✅ Completado | [Ver Proyecto](./project-01-multisite-corporate) |
-| **Proyecto 02: Red Corporativa Segura** | Alta disponibilidad y seguridad en LAN | LACP, PVST+, DHCP Relay, Port Security, SSHv2 | ✅ Completado | [Ver Proyecto](./project-02-Secure%20Inter-VLAN%20Routing%20Architecture%20with%20LACP,%20PVST+%20and%20DHCP) |
-| **Proyecto 03: Red Multicapa Empresarial** | Switching L3 SVI, LACP, NAT/PAT y ACL | SVI (Switch 3560), EtherChannel LACP, NAT/PAT, Extended ACL, DMZ | ✅ Completado | [Ver Proyecto](./project-03-Enterprise%20Multi-Layer%20Switching%20Architecture%20with%20SVI,%20LACP,%20NAT%20and%20ACL) |
+| Nombre del Proyecto | Enfoque Principal | Tecnologías Clave | Enlace |
+| :--- | :--- | :--- | :--- |
+| **Proyecto 01: Multisite Corporate** | Red corporativa multisitio Hub-and-Spoke | OSPFv2, VLAN Trunking, ACLs, PPP, RoaS | [Ver Proyecto](./project-01-multisite-corporate) |
+| **Proyecto 02: Red Corporativa Segura** | Alta disponibilidad y seguridad en LAN | LACP, PVST+, DHCP Relay, Port Security, SSHv2 | [Ver Proyecto](./project-02-Secure%20Inter-VLAN%20Routing%20Architecture%20with%20LACP,%20PVST+%20and%20DHCP) |
+| **Proyecto 03: Red Multicapa Empresarial** | Switching L3 SVI, LACP, NAT/PAT y ACL | SVI (Switch 3560), EtherChannel LACP, NAT/PAT, Extended ACL, DMZ | [Ver Proyecto](./project-03-Enterprise%20Multi-Layer%20Switching%20Architecture%20with%20SVI,%20LACP,%20NAT%20and%20ACL) |
 
 ---
 
