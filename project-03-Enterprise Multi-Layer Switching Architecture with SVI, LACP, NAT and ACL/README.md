@@ -4,7 +4,7 @@
 
 ---
 
-## 1. Resumen del Proyecto
+## 📋 Resumen del Proyecto
 
 Este proyecto implementa una red corporativa utilizando un **Switch de Capa 3 (Cisco 3560)** para realizar el enrutamiento entre VLANs mediante **Interfaces Virtuales de Switch (SVIs)**.
 
@@ -12,7 +12,13 @@ El objetivo principal es interconectar los departamentos de **Ventas** e **Ingen
 
 ---
 
-## 2. Arquitectura de la Topología y Diseño WAN
+## 📦 Archivo de Packet Tracer (.pkt)
+
+* 📥 **[Descargar Topología en Packet Tracer (.pkt)](./project-03-enterprise-multilayer-switching.pkt)** — *Descarga el archivo completo listo para abrir en Cisco Packet Tracer 8.x / 9.x.*
+
+---
+
+## 📐 Arquitectura de la Topología y Diseño WAN
 
 La infraestructura adopta un modelo jerárquico con un switch principal de **Capa 3** (`SW-Core`) y un switch de **Acceso** (`SW1`), conectados a un router de borde (`R1`) para la salida a Internet.
 
@@ -27,7 +33,7 @@ La infraestructura adopta un modelo jerárquico con un switch principal de **Cap
 
 ---
 
-## 3. Esquema de Direccionamiento y VLANs
+## 📊 Esquema de Direccionamiento y VLANs
 
 La red se dividió en subredes independientes para aislar el tráfico por departamentos y servicios:
 
@@ -41,7 +47,7 @@ La red se dividió en subredes independientes para aislar el tráfico por depart
 
 ---
 
-## 4. Tecnologías Clave Implementadas
+## ⚙️ Tecnologías Clave Implementadas
 
 ### A. Enrutamiento Inter-VLAN con SVIs (Switch L3)
 Configuración de `ip routing` en el switch `SW-Core` para procesar el tráfico entre las VLANs 10, 20 y 30 a través de sus respectivas SVIs (`Vlan10`, `Vlan20` y `Vlan30`).
@@ -69,7 +75,7 @@ Seguridad en los puertos de usuario de `SW1` (`Fa0/1` y `Fa0/2`):
 
 ---
 
-## 5. Comandos Esenciales de Configuración
+## 💻 Comandos Esenciales de Configuración
 
 ### SW-Core (Switch Capa 3 Cisco 3560)
 
@@ -145,7 +151,7 @@ ip route 192.168.0.0 255.255.0.0 10.0.0.2
 
 ---
 
-## 6. Verificación y Diagnóstico
+## 🔍 Verificación y Diagnóstico
 
 ### A. Estado de EtherChannel LACP en SW-Core
 
@@ -184,7 +190,7 @@ Extended IP access list DMZ-SECURITY-POLICY
 
 ---
 
-## 7. Archivos de Configuración del Repositorio
+## 📁 Archivos de Configuración del Repositorio
 
 Archivos de configuración (`startup-config`) extraídos de cada equipo:
 

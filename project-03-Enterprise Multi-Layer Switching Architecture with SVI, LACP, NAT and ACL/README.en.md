@@ -4,7 +4,7 @@
 
 ---
 
-## 1. Project Summary
+## 📋 Project Summary
 
 This project implements a corporate network using a **Layer 3 Switch (Cisco 3560)** for Inter-VLAN routing via **Switch Virtual Interfaces (SVIs)**.
 
@@ -12,7 +12,13 @@ The main goal is to connect different departments (**Sales** and **Engineering**
 
 ---
 
-## 2. Network Topology & WAN Design
+## 📦 Packet Tracer File (.pkt)
+
+* 📥 **[Download Packet Tracer Topology (.pkt)](./project-03-enterprise-multilayer-switching.pkt)** — *Download the complete file ready to open in Cisco Packet Tracer 8.x / 9.x.*
+
+---
+
+## 📐 Network Topology & WAN Design
 
 The infrastructure uses a hierarchical design with a main **Layer 3 Switch** (`SW-Core`) and an **Access Switch** (`SW1`), connected to a border router (`R1`) for Internet access.
 
@@ -27,7 +33,7 @@ The infrastructure uses a hierarchical design with a main **Layer 3 Switch** (`S
 
 ---
 
-## 3. Addressing & VLAN Scheme
+## 📊 Addressing & VLAN Scheme
 
 The network is divided into independent subnets to isolate department and service traffic:
 
@@ -41,7 +47,7 @@ The network is divided into independent subnets to isolate department and servic
 
 ---
 
-## 4. Key Technologies Implemented
+## ⚙️ Key Technologies Implemented
 
 ### A. Inter-VLAN Routing with SVIs (L3 Switch)
 Configured `ip routing` on the `SW-Core` switch to handle traffic between VLANs 10, 20, and 30 through their respective SVIs (`Vlan10`, `Vlan20`, and `Vlan30`).
@@ -69,7 +75,7 @@ Hardening applied on access ports of `SW1` (`Fa0/1` and `Fa0/2`):
 
 ---
 
-## 5. Essential Configuration Commands
+## 💻 Essential Configuration Commands
 
 ### SW-Core (Multi-Layer Cisco 3560 Switch)
 
@@ -145,7 +151,7 @@ ip route 192.168.0.0 255.255.0.0 10.0.0.2
 
 ---
 
-## 6. Verification and Diagnostics
+## 🔍 Verification and Diagnostics
 
 ### A. EtherChannel LACP State on SW-Core
 
@@ -184,7 +190,7 @@ Extended IP access list DMZ-SECURITY-POLICY
 
 ---
 
-## 7. Repository Configuration Files
+## 📁 Repository Configuration Files
 
 Startup configuration files (`startup-config`) extracted from each device:
 
